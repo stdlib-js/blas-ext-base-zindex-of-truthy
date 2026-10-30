@@ -45,32 +45,14 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
-<section class="installation">
 
-## Installation
-
-```bash
-npm install @stdlib/blas-ext-base-zindex-of-truthy
-```
-
-Alternatively,
-
--   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
--   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
--   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
-
-The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
-
-To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
-
-</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-var zindexOfTruthy = require( '@stdlib/blas-ext-base-zindex-of-truthy' );
+import zindexOfTruthy from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-ext-base-zindex-of-truthy@deno/mod.js';
 ```
 
 #### zindexOfTruthy( N, x, strideX )
@@ -80,7 +62,7 @@ Returns the index of the first truthy element in a double-precision complex floa
 <!-- eslint-disable max-len -->
 
 ```javascript
-var Complex128Array = require( '@stdlib/array-complex128' );
+import Complex128Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-complex128@deno/mod.js';
 
 var x = new Complex128Array( [ 0.0, 0.0, 0.0, 0.0, 3.0, 0.0, 0.0, 0.0, 4.0, 0.0, 0.0, 0.0, -1.0, 0.0, 3.0, 0.0 ] );
 
@@ -97,7 +79,7 @@ The function has the following parameters:
 If the function is unable to find a truthy element, the function returns `-1`.
 
 ```javascript
-var Complex128Array = require( '@stdlib/array-complex128' );
+import Complex128Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-complex128@deno/mod.js';
 
 var x = new Complex128Array( [ 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ] );
 
@@ -110,7 +92,7 @@ The `N` and stride parameters determine which elements in the strided array are 
 <!-- eslint-disable max-len -->
 
 ```javascript
-var Complex128Array = require( '@stdlib/array-complex128' );
+import Complex128Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-complex128@deno/mod.js';
 
 var x = new Complex128Array( [ 0.0, 0.0, 0.0, 0.0, 3.0, 0.0, 0.0, 0.0, 4.0, 0.0, 0.0, 0.0, -1.0, 0.0, 3.0, 0.0 ] );
 
@@ -123,7 +105,7 @@ Note that indexing is relative to the first index. To introduce an offset, use [
 <!-- eslint-disable max-len -->
 
 ```javascript
-var Complex128Array = require( '@stdlib/array-complex128' );
+import Complex128Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-complex128@deno/mod.js';
 
 // Initial array:
 var x0 = new Complex128Array( [ 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 3.0, 0.0, 5.0, 0.0, 0.0, 0.0 ] );
@@ -143,7 +125,7 @@ Returns the index of the first truthy element in a double-precision complex floa
 <!-- eslint-disable max-len -->
 
 ```javascript
-var Complex128Array = require( '@stdlib/array-complex128' );
+import Complex128Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-complex128@deno/mod.js';
 
 var x = new Complex128Array( [ 0.0, 0.0, 0.0, 0.0, 3.0, 0.0, 0.0, 0.0, 4.0, 0.0, 0.0, 0.0, -1.0, 0.0, 3.0, 0.0 ] );
 
@@ -160,7 +142,7 @@ While [`typed array`][mdn-typed-array] views mandate a view offset based on the 
 <!-- eslint-disable max-len -->
 
 ```javascript
-var Complex128Array = require( '@stdlib/array-complex128' );
+import Complex128Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-complex128@deno/mod.js';
 
 var x = new Complex128Array( [ 0.0, 0.0, 0.0, 0.0, 3.0, 0.0, 0.0, 0.0, 4.0, 0.0, 0.0, 0.0, 0.0, 0.0, 3.0, 0.0 ] );
 
@@ -195,10 +177,10 @@ var idx = zindexOfTruthy.ndarray( 3, x, 1, x.length-3 );
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-var bernoulli = require( '@stdlib/random-array-bernoulli' );
-var Complex128Array = require( '@stdlib/array-complex128' );
-var logEach = require( '@stdlib/console-log-each' );
-var zindexOfTruthy = require( '@stdlib/blas-ext-base-zindex-of-truthy' );
+import bernoulli from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-array-bernoulli@deno/mod.js';
+import Complex128Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-complex128@deno/mod.js';
+import logEach from 'https://cdn.jsdelivr.net/gh/stdlib-js/console-log-each@deno/mod.js';
+import zindexOfTruthy from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-ext-base-zindex-of-truthy@deno/mod.js';
 
 var buf = bernoulli( 10*2, 0.3, {
     'dtype': 'float64'
@@ -216,130 +198,7 @@ console.log( idx );
 
 <!-- C interface documentation. -->
 
-* * *
 
-<section class="c">
-
-## C APIs
-
-<!-- Section to include introductory text. Make sure to keep an empty line after the intro `section` element and another before the `/section` close. -->
-
-<section class="intro">
-
-</section>
-
-<!-- /.intro -->
-
-<!-- C usage documentation. -->
-
-<section class="usage">
-
-### Usage
-
-```c
-#include "stdlib/blas/ext/base/zindex_of_truthy.h"
-```
-
-#### stdlib_strided_zindex_of_truthy( N, \*X, strideX )
-
-Returns the index of the first truthy element in a double-precision complex floating-point strided array.
-
-```c
-#include "stdlib/complex/float64/ctor.h"
-
-const double x[] = { 0.0, 0.0, 0.0, 0.0, 3.0, 0.0, 4.0, 0.0 };
-
-int idx = stdlib_strided_zindex_of_truthy( 4, (const stdlib_complex128_t *)x, 1 );
-// returns 2
-```
-
-The function accepts the following arguments:
-
--   **N**: `[in] CBLAS_INT` number of indexed elements.
--   **X**: `[in] stdlib_complex128_t*` input array.
--   **strideX**: `[in] CBLAS_INT` stride length.
-
-```c
-CBLAS_INT stdlib_strided_zindex_of_truthy( const CBLAS_INT N, const stdlib_complex128_t *X, const CBLAS_INT strideX );
-```
-
-#### stdlib_strided_zindex_of_truthy_ndarray( N, \*X, strideX, offsetX )
-
-Returns the index of the first truthy element in a double-precision complex floating-point strided array using alternative indexing semantics.
-
-```c
-#include "stdlib/complex/float64/ctor.h"
-
-const double x[] = { 0.0, 0.0, 0.0, 0.0, 3.0, 0.0, 4.0, 0.0 };
-
-int idx = stdlib_strided_zindex_of_truthy_ndarray( 4, (const stdlib_complex128_t *)x, 1, 0 );
-// returns 2
-```
-
-The function accepts the following arguments:
-
--   **N**: `[in] CBLAS_INT` number of indexed elements.
--   **X**: `[in] stdlib_complex128_t*` input array.
--   **strideX**: `[in] CBLAS_INT` stride length.
--   **offsetX**: `[in] CBLAS_INT` starting index.
-
-```c
-CBLAS_INT stdlib_strided_zindex_of_truthy_ndarray( const CBLAS_INT N, const stdlib_complex128_t *X, const CBLAS_INT strideX, const CBLAS_INT offsetX );
-```
-
-</section>
-
-<!-- /.usage -->
-
-<!-- C API usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
-
-<section class="notes">
-
-### Notes
-
--   A complex number is truthy when at least one of its real or imaginary components is truthy.
--   Both functions explicitly treat `NaN` values as falsy.
-
-</section>
-
-<!-- /.notes -->
-
-<!-- C API usage examples. -->
-
-<section class="examples">
-
-### Examples
-
-```c
-#include "stdlib/blas/ext/base/zindex_of_truthy.h"
-#include "stdlib/complex/float64/ctor.h"
-#include <stdio.h>
-
-int main( void ) {
-    // Create a strided array (interleaved real and imaginary components):
-    const double x[] = { 0.0, 0.0, 0.0, 0.0, 3.0, 0.0, 0.0, 0.0, 4.0, 0.0, 0.0, 0.0, -1.0, 0.0, 3.0, 0.0 };
-
-    // Specify the number of indexed elements:
-    const int N = 8;
-
-    // Specify a stride:
-    const int strideX = 1;
-
-    // Perform a search:
-    int idx = stdlib_strided_zindex_of_truthy( N, (const stdlib_complex128_t *)x, strideX );
-
-    // Print the result:
-    printf( "index value: %d\n", idx );
-}
-```
-
-</section>
-
-<!-- /.examples -->
-
-</section>
-
-<!-- /.c -->
 
 <!-- Section to include cited references. If references are included, add a horizontal rule *before* the section. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
 
@@ -366,7 +225,7 @@ int main( void ) {
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -429,7 +288,7 @@ Copyright &copy; 2016-2026. The Stdlib [Authors][stdlib-authors].
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/blas-ext-base-zindex-of-truthy/main/LICENSE
 
-[@stdlib/array/complex128]: https://github.com/stdlib-js/array-complex128
+[@stdlib/array/complex128]: https://github.com/stdlib-js/array-complex128/tree/deno
 
 [mdn-typed-array]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray
 
